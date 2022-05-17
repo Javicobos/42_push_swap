@@ -6,11 +6,12 @@
 #    By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 11:50:53 by jcobos-d          #+#    #+#              #
-#    Updated: 2022/05/17 12:33:17 by jcobos-d         ###   ########.fr        #
+#    Updated: 2022/05/17 14:02:45 by jcobos-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	push_swap_utils.c input_p_s.c ft_printf.c printf_pointerprinter.c
+SRCS	=	push_swap_utils.c input_p_s.c ft_printf.c printf_pointerprinter.c \
+			stack_utils.c
 
 OBJS	=	${SRCS:.c=.o}
 

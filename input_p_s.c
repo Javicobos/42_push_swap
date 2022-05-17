@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:17:19 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/17 13:19:20 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:58:47 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ int			good_numbers(t_number *first);
 int	main(int argc, char **argv)
 {
 	t_number	*first;
+	t_stack		*stack_a;
+	t_stack		*stack_b;
 
-	if (argc == 1)
-		return (0);
-	if (!is_valid_input(argc, argv))
+	if (argc == 1 || !is_valid_input(argc, argv))
 		return (0);
 	first = make_numbers(argc, argv);
 	if (!first || !good_numbers(first))
 		return (0);
+	stack_a = make_stack_a(first);
+	stack_b = make_stack_b();
 }
 
 long int	ft_atol(const char *str)
@@ -61,7 +63,7 @@ int	is_valid_input(int argc, char **argv)
 	{
 		if ((ft_atol(argv[argument])) == LONG_MAX)
 		{
-			ft_printf("Error \n");
+			write(STDERR_FILENO, "Error\n", 6);
 			return (0);
 		}
 	argument++;
@@ -76,7 +78,7 @@ t_number	*make_numbers(int argc, char **argv)
 	t_number	*previous;
 	int			argument;
 
-	first = malloc(sizeof(*first)); //create first outside and pass as param to save space
+	first = malloc(sizeof(*first)); //create first outside and pass as param
 	if (!first)
 		return (0);
 	argument = 1;
@@ -112,7 +114,7 @@ int	good_numbers(t_number *first)
 		{
 			if (current->value == checking->value)
 			{
-				ft_printf("Error \n");
+			write(STDERR_FILENO, "Error\n", 6);
 				return (0);
 			}
 			checking = checking->next;
