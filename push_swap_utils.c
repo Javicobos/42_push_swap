@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/17 11:13:13 by jcobos-d          #+#    #+#             */
+/*   Updated: 2022/05/17 11:13:19 by jcobos-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 sa(swap a) : Swap the first 2 elements at the top of stack a.
 Do nothing if there is only one or no elements.
 */
+#include "push_swap.h"
+
 void swap(t_stack *stack)
 {
 	t_number	*f_to_s;
@@ -19,7 +33,7 @@ void swap(t_stack *stack)
 }
 /*pa (push a): Take the first element at the top of b and put it at the top of a.
 Do nothing if b is empty.*/
-void push(t_stack* src, t_stack* dest)
+void push(t_stack *src, t_stack *dest)
 {
 	t_number	*pushing;
 

@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   pointerprinter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 11:13:16 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/17 12:34:04 by jcobos-d         ###   ########.fr       */
+/*   Created: 2022/04/26 12:51:00 by jcobos-d          #+#    #+#             */
+/*   Updated: 2022/05/17 12:16:43 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+int	ft_writeabs(int nbr, char *base);
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-# include "ft_printf.h"
-
-typedef struct s_number
+int	ft_putptr(unsigned long nbr, char *base, int size)
 {
-	int	value;
-	struct s_number *next;
-	struct s_number *prev;
-} t_number;
+	int	retval;
 
-typedef struct s_stack
-{
-	t_number *first;
-	t_number *last;
-	int		total;
-}	t_stack;
-
-#endif
+	retval = 0;
+	if (nbr == 0)
+		retval += write(1, base, 1);
+	else if (nbr / size != 0)
+	{
+		retval += ft_putptr(nbr / size, base, size);
+		retval += ft_writeabs(nbr % size, base);
+	}
+	else
+		retval += ft_writeabs(nbr, base);
+	return (retval);
+}
