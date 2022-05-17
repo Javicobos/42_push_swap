@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:46:59 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/17 13:57:14 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/17 16:10:31 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,23 @@ t_stack	*make_stack_b(void)
 	stack_b->last = 0;
 	stack_b->total = 0;
 	return (stack_b);
+}
+
+void	stack_printer(t_stack *to_print)
+{
+	t_number	*current;
+
+	ft_printf("----- STACK DATA -----\n");
+	ft_printf("my stack is at %p.\n", to_print);
+	ft_printf("the first element is at %p.\n", to_print->first);
+	ft_printf("the last element is at %p.\n", to_print->last);
+	ft_printf("the total number of elements is %i.\n", to_print->total);
+	current = to_print->first;
+	while (current)
+	{
+		ft_printf("----- element data -----\n");
+		ft_printf("the number %i is at %p.\n", current->value, current);
+		ft_printf("the previous element is %p, and the next one is %p.\n", current->prev, current->next);
+		current = current->next;
+	}
 }
