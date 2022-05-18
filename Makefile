@@ -6,7 +6,7 @@
 #    By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 11:50:53 by jcobos-d          #+#    #+#              #
-#    Updated: 2022/05/18 13:45:25 by jcobos-d         ###   ########.fr        #
+#    Updated: 2022/05/18 17:10:28 by jcobos-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,5 +50,9 @@ fclean:		clean
 			@echo "${GREEN}Binary ${NAME} cleaned${RESET}"
 
 re:			fclean all
+
+#random:		${NAME}
+#				# ARG=$(python random_generator.py)
+#				# ./push_swap ${=ARG}  
 
 .PHONY:		all clean fclean re
