@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:13:16 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 13:44:35 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:31:30 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,20 @@ typedef struct s_stack
 	int				total;
 }	t_stack;
 
-void	swap(t_stack *stack);
-void	push(t_stack *src, t_stack *dest);
-void	rotate(t_stack *stack);
-void	rev_rotate(t_stack *stack);
+void		swap(t_stack *stack);
+void		push(t_stack *src, t_stack *dest);
+void		rotate(t_stack *stack);
+void		rev_rotate(t_stack *stack);
 
-t_stack	*make_stack_a(t_number *first);
-t_stack	*make_stack_b(void);
-void	stack_printer(t_stack *to_print);
+t_stack		*make_stack_a(t_number *first);
+t_stack		*make_stack_b(void);
+void		stack_printer(t_stack *to_print);
 
 int			is_sorted(t_stack *stack);
 t_number	*max_in_stack(t_stack *stack);
 t_number	*min_in_stack(t_stack *stack);
 int			rotate_direction(t_stack *stack, t_number *ele);
 
-void superslow_sort(t_stack *stack_a, t_stack *stack_b);
+void		superslow_sort(t_stack *stack_a, t_stack *stack_b);
 
 #endif

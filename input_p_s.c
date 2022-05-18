@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:17:19 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 13:45:01 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:22:35 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	main(int argc, char **argv)
 	stack_a = make_stack_a(first);
 	stack_b = make_stack_b();
 	
-	stack_printer(stack_a);
-	stack_printer(stack_b);
+	//stack_printer(stack_a);
+	//stack_printer(stack_b);
 	
 	//push(stack_a, stack_b);
 	//swap(stack_a);
@@ -42,7 +42,7 @@ int	main(int argc, char **argv)
 	superslow_sort(stack_a, stack_b);
 
 	stack_printer(stack_a);
-	stack_printer(stack_b);
+	//stack_printer(stack_b);
 }
 
 long int	ft_atol(const char *str)

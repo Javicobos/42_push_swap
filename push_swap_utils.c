@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:13:13 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 13:26:59 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:31:00 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,15 @@ void	swap(t_stack *stack)
 	s_to_f->prev = 0;
 	stack->first = s_to_f;
 }
-/*pa (push a): Take the first element at the top of b and put it at the top of a.
-Do nothing if b is empty.*/
+
+/*pa (push a): Take the first element at the top of b and put it 
+at the top of a. Do nothing if b is empty.*/
 void	push(t_stack *src, t_stack *dest)
 {
 	t_number	*pushing;
 
 	if (!(src->first))
-		return;
+		return ;
 	if (src->first->next)
 		src->first->next->prev = 0;
 	else
@@ -60,7 +61,7 @@ The first element becomes the last one.*/
 void	rotate(t_stack *stack)
 {
 	if (stack->total < 2)
-		return;
+		return ;
 	stack->first->prev = stack->last;
 	stack->last->next = stack->first;
 	stack->last = stack->first;
@@ -71,10 +72,10 @@ void	rotate(t_stack *stack)
 
 /*rra (reverse rotate a): Shift down all elements of stack a by 1.
 The last element becomes the first one.*/
-void	rev_rotate(t_stack*	stack)
+void	rev_rotate(t_stack *stack)
 {
 	if (stack->total < 2)
-		return;
+		return ;
 	stack->last->next = stack->first;
 	stack->first->prev = stack->last;
 	stack->first = stack->last;
