@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:17:19 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 12:10:33 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:45:01 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,12 @@ int	main(int argc, char **argv)
 	//push(stack_a, stack_b);
 	//swap(stack_a);
 	//rotate(stack_a);
-	rev_rotate(stack_a);
+	//rev_rotate(stack_a);
+
+	superslow_sort(stack_a, stack_b);
 
 	stack_printer(stack_a);
-	//stack_printer(stack_b);
+	stack_printer(stack_b);
 }
 
 long int	ft_atol(const char *str)

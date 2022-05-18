@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 12:34:39 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 13:24:39 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:33:02 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ int	rotate_direction(t_stack *stack, t_number *ele)
 		current = current->prev;
 	}
 	if (elements_before > stack->total - elements_before - 1)
-		return (1);
-	return (-1);
+		return (elements_before);
+	return (-(stack->total - elements_before - 1));
 }

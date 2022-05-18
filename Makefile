@@ -6,12 +6,12 @@
 #    By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 11:50:53 by jcobos-d          #+#    #+#              #
-#    Updated: 2022/05/18 12:40:13 by jcobos-d         ###   ########.fr        #
+#    Updated: 2022/05/18 13:45:25 by jcobos-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	push_swap_utils.c input_p_s.c ft_printf.c printf_pointerprinter.c \
-			stack_utils.c sort_utils.c
+			stack_utils.c sort_utils.c superslow_sort.c 
 
 OBJS	=	${SRCS:.c=.o}
 
