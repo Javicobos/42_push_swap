@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:28:43 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 15:26:48 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:39:34 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	superslow_sort(t_stack *stack_a, t_stack *stack_b)
 	one_element_a(stack_a, stack_b);
 	while (stack_b->total > 0)
 	{
-		put_max_first(stack_b);
+		put_max_first_b(stack_b);
 		push(stack_b, stack_a);
 		ft_printf("pa\n");
 	}
