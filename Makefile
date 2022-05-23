@@ -6,7 +6,7 @@
 #    By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 11:50:53 by jcobos-d          #+#    #+#              #
-#    Updated: 2022/05/23 17:28:51 by jcobos-d         ###   ########.fr        #
+#    Updated: 2022/05/23 20:30:55 by jcobos-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,9 +56,10 @@ re:			fclean all
 #				# ./push_swap ${=ARG}  
 
 python:		${NAME}
-			read $(numbers)
-			python3 random_generator.py $(numbers)
+			python3 random_generator.py
 			cat testfile
+			@echo
+			cat testfile | xargs ./${NAME} | wc -l
 
 
 .PHONY:		all clean fclean re

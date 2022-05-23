@@ -6,7 +6,7 @@
 /*   By: jcobos-d <jcobos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:17:19 by jcobos-d          #+#    #+#             */
-/*   Updated: 2022/05/18 16:49:56 by jcobos-d         ###   ########.fr       */
+/*   Updated: 2022/05/23 20:36:52 by jcobos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ int	good_numbers(t_number *first)
 		{
 			if (current->value == checking->value)
 			{
-			write(STDERR_FILENO, "Error\n", 6);
+				write(STDERR_FILENO, "Error\n", 6);
 				return (0);
 			}
 			checking = checking->next;
